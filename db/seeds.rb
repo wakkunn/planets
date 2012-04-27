@@ -1,4 +1,4 @@
-table_names = %w(announcements)
+table_names = %w(announcements groups)
 table_names.each do |table_name|
   dir = case Rails.env
   when 'development', 'staging'
