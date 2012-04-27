@@ -13,6 +13,37 @@ class User < ActiveRecord::Base
     self[:hits] = hits.map do |hit|
       hit.to_i
     end
+    self.balls = balls.map do |ball|
+      h = {}
+      [ :change, :level ].each do |key|
+        h[key] = ball.send(key).to_i
+      end
+      h
+    end
+  end
+  
+  def balls
+    case self[:balls]
+    when String
+      YAML.load(self[:balls]).map { |e| Ball.new(e) }
+    when Array
+      self[:balls].map { |e| e.kind_of?(Ball) ? e : Ball.new(e) }
+    end
+  end
+  
+  def balls=(value)
+    case value
+    when Hash
+      self[:balls] = value.keys.sort.map do |key|
+        h = {}
+        value[key].each do |k, v|
+          h[k.to_sym] = v
+        end
+        h
+      end
+    when Array
+      self[:balls] = value
+    end
   end
   
   def catches
@@ -71,14 +102,14 @@ class User < ActiveRecord::Base
       xml.address1 address1
       xml.address2 address2
       xml.phone phone
-#      xml.balls do
-#        balls.each do |b|
-#          xml.ball do
-#            xml.change b[:change]
-#            xml.level b[:level]
-#          end
-#        end
-#      end
+      xml.balls do
+        balls.each do |b|
+          xml.ball do
+            xml.change b.change
+            xml.level b.level
+          end
+        end
+      end
       xml.hits do
         hits.each do |h|
           xml.hits h.to_i

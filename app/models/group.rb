@@ -27,7 +27,8 @@ class Group < ActiveRecord::Base
           :address2 => u.address2,
           :phone => u.phone,
           :catches => u.catches,
-          :hits => u.hits
+          :hits => u.hits,
+          :balls => u.balls
         }
       }
     }
