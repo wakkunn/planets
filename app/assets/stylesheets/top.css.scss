@@ -1,3 +1,154 @@
-// Place all the styles related to the top controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/*base*/
+body{
+  margin: 0;
+}
+.bg {  
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+@media screen and (max-width: 1024px){
+  .bg {
+    left: 50%;
+    margin-left: -512px;
+  }
+}
+#container {
+  position: relative;
+  width: 950px;
+  margin: 20px auto;
+  background: white;
+  background: url(wash-white-30.png) repeat scroll left top transparent;
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  padding: 10px;
+  font-size: 18px;
+}
+
+/*footer*/
+#footer{
+  background: #133783;
+  padding: 5px 0;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+
+/*header*/
+#header{
+  background: #133783;
+  padding: 5px 0;
+  position: relative;
+  color: white;
+  text-align: center;
+}
+.header_contents{
+  width: 950px;
+  margin: 0 auto;
+}
+.news{
+  float: left;
+  margin: 0 5px;
+}
+.history{
+  float: left;
+  width: 500px;
+}
+
+/*image*/
+#top_image{
+  position: relative;
+  width: 950px;
+  height: 300px;
+  margin: 20px auto 10px;
+  overflow: hidden;
+  border: 10px solid #133783;
+}
+#top_image img{
+  margin: -180px 0 0 0;
+}
+#team_name{
+  width: 950px;
+  margin: -200px auto 80px;
+  position: relative;
+  color: white;
+  padding-left: 40px;
+}
+.name{
+  font-size: 55px;
+  font-weight: bold;
+}
+.description{
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/*menu*/
+#main_menu{
+  width: 950px;
+  position: relative;
+  margin: 40px auto;
+  color: white;
+}
+#main_menu ul{
+  list-style: none;
+  text-align: center;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+#main_menu ul li{
+  display: inline;
+  margin: 15px 2px 15px 2px;
+  padding: 30px 40px;
+  vertical-align: middle;
+  background: -webkit-gradient(linear, left top, left bottom, from(dodgerblue), to(mediumblue));
+  background: -moz-linear-gradient(top, dodgerblue, mediumblue);
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border: 1px dodgerblue solid;
+}
+
+/*Topページ詳細*/
+.planets{
+  display: inline-block;
+}
+.planets_image{
+  float: left;
+}
+.planets_description{
+  width: 310px;
+  float: left;
+  margin-left: 15px;
+}
+.planets_common{
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+}
+
+/*ボタン*/
+.buttons{
+  color: white;
+  background: -webkit-gradient(linear, left top, left bottom, from(dodgerblue), to(mediumblue));
+  background: -moz-linear-gradient(top, dodgerblue, mediumblue);
+  border-radius: 5px;
+  -moz-border-radius:5px;
+  -webkit-border-radius:5px;
+  border: 1px dodgerblue solid;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+.new_comment{
+  background: red;
+  padding: 2px;
+  color: white;
+}
