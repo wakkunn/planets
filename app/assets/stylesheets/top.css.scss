@@ -20,7 +20,7 @@ body{
 #container {
   position: relative;
   width: 950px;
-  margin: 20px auto;
+  margin: 0 auto 20px auto;
   background: white;
   background: url(wash-white-30.png) repeat scroll left top transparent;
   border-radius: 5px;
@@ -74,7 +74,7 @@ body{
 }
 #team_name{
   width: 950px;
-  margin: -200px auto 80px;
+  margin: -200px auto 50px;
   position: relative;
   color: white;
   padding-left: 40px;
@@ -92,25 +92,31 @@ body{
 #main_menu{
   width: 950px;
   position: relative;
-  margin: 40px auto;
+  margin: 0 auto;
   color: white;
 }
 #main_menu ul{
   list-style: none;
   text-align: center;
-  margin: 50px 0 0 0;
+  display: inline-block;
+  margin: 0 43px 0 43px;
   padding: 0;
+  margin-bottom: 10px;
 }
 #main_menu ul li{
-  display: inline;
+  display: inline-block;
   margin: 15px 2px 15px 2px;
   padding: 30px 40px;
-  vertical-align: middle;
+  width: 130px;
+  float: left;
   background: -webkit-gradient(linear, left top, left bottom, from(dodgerblue), to(mediumblue));
   background: -moz-linear-gradient(top, dodgerblue, mediumblue);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='dodgerblue', endColorstr='mediumblue')";
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='dodgerblue', endColorstr='mediumblue');
   border-radius: 5px;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
+  behavior:url(PIE.htc);//for IE
   border: 1px dodgerblue solid;
 }
 
@@ -136,16 +142,26 @@ body{
 
 /*ボタン*/
 .buttons{
+  display: inline-block;
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(dodgerblue), to(mediumblue));
   background: -moz-linear-gradient(top, dodgerblue, mediumblue);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='dodgerblue', endColorstr='mediumblue')";
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='dodgerblue', endColorstr='mediumblue');
   border-radius: 5px;
   -moz-border-radius:5px;
   -webkit-border-radius:5px;
   border: 1px dodgerblue solid;
   text-align: center;
+  behavior:url(PIE.htc);//for IE
   margin: 10px;
   padding: 20px;
+  a {
+    color: white;
+    text-decoration: none;
+    width: 250px;
+    display: block;
+  }
 }
 .new_comment{
   background: red;
